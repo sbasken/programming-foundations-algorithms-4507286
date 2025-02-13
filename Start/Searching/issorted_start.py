@@ -8,8 +8,14 @@ items2 = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
 def is_sorted(itemlist):
     # TODO: using the brute force method
 
-    return True
+    # option 1:
+    # for i in range(len(itemlist)-1):
+    #     if (itemlist[i] > itemlist[i+1]):
+    #         return False
+    # return True
+
+    # option 2:
+    return all(itemlist[i] < itemlist[i+1] for i in range(len(itemlist)-1))
 
 print(is_sorted(items1))
 print(is_sorted(items2))
-
